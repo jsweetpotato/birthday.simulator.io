@@ -5,7 +5,7 @@
 - [X] Cake flavor options
 - [ ] Next & Back
 - [ ] Cream Size 
-- [ ] Cream Count 
+- [X] Cream Count 
 - [ ] Cake Decotration
 - [ ] Make Cake Video
 - [ ] Replay
