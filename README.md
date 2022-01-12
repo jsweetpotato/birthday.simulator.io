@@ -4,7 +4,7 @@
 ## To Do List
 - [X] Cake flavor options
 - [ ] Next & Back
-- [ ] Cream Size 
+- [X] Cream Size 
 - [X] Cream Count 
 - [ ] Cake Decotration
 - [ ] Make Cake Video
