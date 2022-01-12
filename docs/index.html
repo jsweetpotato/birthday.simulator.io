@@ -10,23 +10,34 @@
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div  class="stage">
+  <div class="stage">
     <div id="cake" class="cake">
       <ul class="creams">
         <li class="cream">
-          <div class="cream-top">
-          </div>
+          <div class="cream-top"></div>
+          <div class="cream-bottom"></div>
         </li>
       </ul>
-      <span class="top"></span>
+      <div class="top"></div>
       <ul class="side"></ul>
-      <span class="bottom"></span>
+      <div class="bottom"></div>
     </div>
   </div>
-  <section class="welcome">
-    <header>Welcome to forgot a cake</header>
-    <button class="btn">start</button>
-  </section>
-  <!-- <section></section> -->
+  <div class="ui_fix_buttons"></div>
+  <div class="ui_bottons">
+    <div class="color_buttons">
+      <button class="chocolate">0</button>
+      <button class="vanila">1</button>
+      <button class="green">2</button>
+      <button class="sweetptt">3</button>
+      <button class="cheese">4</button>
+    </div>
+    <div class="cream-count">
+      <input type="range" class="count" min="4" max="12" step="1" value="8">
+    </div>
+    <div class="cream-size">
+      <input type="range" class="size" min="0" max="4" step="1" value="2">
+    </div>
+  </d>
 </body>
 </html>

@@ -1,3 +1,28 @@
+:root{
+  /* CAKE FLAVOR COLOR */
+  --chocolate-side: linear-gradient(to bottom, #5a2600, #b64c00);
+  --chocolate-T-B: rgb(172, 73, 3);
+  --chocolate-cream-T: linear-gradient(to top, #5d2700, #df6c19);
+  --chocolate-cream-B: linear-gradient(to top, #251000, #5d2700);
+
+  --vanila-side: linear-gradient(to bottom, #f3cb76, #eee3b6);
+  --vanila-T-B: #fff1b9;
+  --vanila-cream:linear-gradient(to top, #ecc061, #fff1b7);
+
+  --green-side: linear-gradient(to bottom, #5b7700, #98b12a);
+  --green-T-B: #b9d441;
+  --green-cream:linear-gradient(to top, #5b7700, #b9d441);
+
+  --sweetptt-side: linear-gradient(to bottom, #e6a800, #ffde71);
+  --sweetptt-T-B: #ffde71;
+  --sweetptt-cream:linear-gradient(to top, #d68b00, #ffde71);
+
+  --cheese-side: linear-gradient(to bottom, #aa4c00, #ffe07b 30%);
+  --cheese-T: #aa4c00;
+  --cheese-B: #ffe07b;
+  --cheese-cream: transparent;
+}
+
 @keyframes infiniteSpin {
   0% {
     transform:rotateX(-20deg) rotateY(0deg) rotateZ(0deg);
@@ -44,7 +69,8 @@ body{
   width: 400px;
   height: 400px;
   transform-style: preserve-3d;
-  animation: infiniteSpin 20s infinite linear;
+  transform: rotateX(-3deg);
+  /* animation: infiniteSpin 20s infinite linear; */
 }
 
 ul {
@@ -72,9 +98,8 @@ li {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 5;
-  z-index: 5;
-  transform: translateY(-90px);
+  z-index: 1;
+  transform: translateY(-75px) ;
 }
 
 
@@ -85,11 +110,25 @@ li {
 
 .cream-top li{
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 10px 24px 10px;
-  border-color: transparent transparent #ff9100 transparent;
+  width: 16px;
+  height: 32px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: var(--chocolate-cream-T);
+  transform-origin: bottom;
+}
+
+.cream-bottom {
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.cream-bottom li{
+  position: absolute;
+  width: 16px;
+  height: 14px;
+  background: var(--chocolate-cream-B);
+  backface-visibility: none;
+  transform-origin: top;
 }
 
 
@@ -100,10 +139,11 @@ li {
   height: 400px;
   left: 0;
   top: 0;
-  background-color: chocolate;
+  background: var(--chocolate-T-B);
   border-radius: 50%;
   user-select: none;
   z-index: 0;
+  backface-visibility: hidden;
 }
 
 .top{
@@ -111,15 +151,37 @@ li {
 }
 
 .bottom{
-    transform: rotateX(90deg) translateZ(-60px);
+  transform: rotateX(90deg) translateZ(-60px);
 }
 
 /* ----------CAKE SIDE---------- */
 
 .side li{
   width: 22px; /* to soft add 1px*/
-  height: 120px;
-  background: linear-gradient(to bottom, #924610, chocolate);
+  height: 121px;
+  background: var(--chocolate-side);
   z-index: -2;
 }
 
+/* CAKE CHANGE COLOR */
+
+.chocolate .side li{background: var(--chocolate-side)}
+.chocolate .cream-top li{background: var(--chocolate-cream-T);}
+.chocolate .top, .chocolate .bottom{background: var(--chocolate-T-B);}
+
+.vanila .side li{background: var(--vanila-side);}
+.vanila .cream-top li{background: var(--vanila-cream);}
+.vanila .top, .vanila .bottom{background: var(--vanila-T-B);}
+
+.green .side li{background: var(--green-side);}
+.green .cream-top li{background: var(--green-cream);}
+.green .top, .green .bottom{background: var(--green-T-B);}
+
+.sweetptt .side li{background: var(--sweetptt-side);}
+.sweetptt .cream-top li{background: var(--sweetptt-cream);}
+.sweetptt .top, .sweetptt .bottom{background: var(--sweetptt-T-B);}
+
+.cheese .side li{background: var(--cheese-side);}
+.cheese .cream-top li{background: var(--cheese-cream);}
+.cheese .top{background: var(--cheese-T);}
+.cheese .bottom{background: var(--cheese-B);}
