@@ -199,8 +199,8 @@ class App {
 
       for (let i = 0; i <= count; i++){
         this.groupT.push(this.creamGroupArr[i].querySelectorAll(".cream-top li"));
-        groupB.push(this.creamGroupArr[i].querySelectorAll(".cream-bottom li"));
-        creamT.push(this.creamGroupArr[i].querySelectorAll(".cream-top"));
+        this.groupB.push(this.creamGroupArr[i].querySelectorAll(".cream-bottom li"));
+        this.creamT.push(this.creamGroupArr[i].querySelectorAll(".cream-top"));
       }
 
     });
