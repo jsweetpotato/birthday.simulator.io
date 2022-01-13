@@ -33,11 +33,11 @@ class App {
   }
 
   changeFlavor() {
-    const flavors = [...document.querySelectorAll(".color_buttons button")];
+    const flavors = [...document.querySelectorAll(".color-buttons button")];
     flavors.forEach(e => e.addEventListener("click", () => {
       console.dir(e);
-      if (document.querySelector(".color_buttons .select")) {
-        document.querySelector(".color_buttons .select").classList.remove("select");
+      if (document.querySelector(".color-buttons .select")) {
+        document.querySelector(".color-buttons .select").classList.remove("select");
       }
       e.classList.add("select");
       this.cake.classList.remove(...this.FLAVORS);
@@ -101,13 +101,12 @@ class App {
       this.creamBottomArr[i].style.transform = `rotateY(${deg}deg) translateZ(${this.transZ}px)`;
     }
 
-    this.creamTop.style.transform = `translateY(-31.8px)`;
+    this.creamTop.style.transform = `translateY(${setting.creamTopTransY[2]}px)`;
 
     sizeRange.addEventListener("change", () => {
       size = sizeRange.value; 
 
-      this.transZ = Math.round((setting.width[size] / 2) / (Math.tan(Math.PI / 180 * 18)));
-      
+      this.transZ = Math.round((setting.width[size] / 2) / (Math.tan(Math.PI / 180 * 18)));    
 
       for (let i = 0; i <= this.count; i++){
         for (let j = 0; j < 10; j++){
@@ -146,7 +145,7 @@ class App {
     const styleSet = (count) => {
       for (let i = 0; i <= count; i++) {
         let deg = i * (360 / this.creamGroupArr.length);
-        this.creamGroupArr[i].style.transform = `rotateY(${deg}deg) translateZ(${200 - this.transZ * 2}px)`;
+        this.creamGroupArr[i].style.transform = `rotateY(${deg}deg) translateZ(${200 - 24*2}px)`;
       }
     };
     this.styleSet = styleSet;

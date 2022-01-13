@@ -2,20 +2,23 @@
   /* CAKE FLAVOR COLOR */
   --chocolate-side: linear-gradient(to bottom, #5a2600, #b64c00);
   --chocolate-T-B: rgb(172, 73, 3);
-  --chocolate-cream-T: linear-gradient(to top, #5d2700, #df6c19);
-  --chocolate-cream-B: linear-gradient(to top, #251000, #5d2700);
+  --chocolate-cream-T: linear-gradient(to top, #662b00, #df6c19);
+  --chocolate-cream-B: linear-gradient(to top, #3d1b00, #5d2700);
 
   --vanila-side: linear-gradient(to bottom, #f3cb76, #eee3b6);
   --vanila-T-B: #fff1b9;
-  --vanila-cream:linear-gradient(to top, #ecc061, #fff1b7);
+  --vanila-cream-T:linear-gradient(to top, #ffdd94, #fff1b7);
+  --vanila-cream-B:linear-gradient(to top, #c09a48, #ffdc91);
 
   --green-side: linear-gradient(to bottom, #5b7700, #98b12a);
   --green-T-B: #b9d441;
-  --green-cream:linear-gradient(to top, #5b7700, #b9d441);
+  --green-cream-T:linear-gradient(to top, #7aa000, #ceec48);
+  --green-cream-B:linear-gradient(to top, #3b4d00, #7a9e01);
 
   --sweetptt-side: linear-gradient(to bottom, #e6a800, #ffde71);
   --sweetptt-T-B: #ffde71;
-  --sweetptt-cream:linear-gradient(to top, #d68b00, #ffde71);
+  --sweetptt-cream-T:linear-gradient(to top, #ffb300, #ffde71);
+  --sweetptt-cream-B:linear-gradient(to top, #b97800, #ffb300);
 
   --cheese-side: linear-gradient(to bottom, #aa4c00, #ffe07b 30%);
   --cheese-T: #aa4c00;
@@ -60,7 +63,6 @@ body{
   height: 100vh;
   left: 0;
   top: 0;
-  background-color: beige;
   perspective: 1000px;
 }
 
@@ -70,7 +72,7 @@ body{
   height: 400px;
   transform-style: preserve-3d;
   transform: rotateX(-3deg);
-  animation: infiniteSpin 20s infinite linear;
+  animation: infiniteSpin 160s infinite  linear;
 }
 
 ul {
@@ -168,20 +170,24 @@ li {
 .chocolate .side li{background: var(--chocolate-side)}
 .chocolate .cream-top li{background: var(--chocolate-cream-T);}
 .chocolate .top, .chocolate .bottom{background: var(--chocolate-T-B);}
+.chocolate .cream-bottom li{background: var(--chocolate-cream-B);}
 
 .vanila .side li{background: var(--vanila-side);}
-.vanila .cream-top li{background: var(--vanila-cream);}
+.vanila .cream-top li{background: var(--vanila-cream-T);}
+.vanila .cream-bottom li{background: var(--vanila-cream-B);}
 .vanila .top, .vanila .bottom{background: var(--vanila-T-B);}
 
 .green .side li{background: var(--green-side);}
-.green .cream-top li{background: var(--green-cream);}
+.green .cream-top li{background: var(--green-cream-T);}
+.green .cream-bottom li{background: var(--green-cream-B);}
 .green .top, .green .bottom{background: var(--green-T-B);}
 
 .sweetptt .side li{background: var(--sweetptt-side);}
-.sweetptt .cream-top li{background: var(--sweetptt-cream);}
+.sweetptt .cream-top li{background: var(--sweetptt-cream-T);}
+.sweetptt .cream-bottom li{background: var(--sweetptt-cream-B);}
 .sweetptt .top, .sweetptt .bottom{background: var(--sweetptt-T-B);}
 
 .cheese .side li{background: var(--cheese-side);}
-.cheese .cream-top li{background: var(--cheese-cream);}
+.cheese .cream-top li, .cheese .cream-bottom li{background: var(--cheese-cream);}
 .cheese .top{background: var(--cheese-T);}
 .cheese .bottom{background: var(--cheese-B);}
