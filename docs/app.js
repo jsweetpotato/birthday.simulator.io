@@ -9,9 +9,9 @@ class App {
     const FLAVORS = ["chocolate", "vanila", "green", "sweetptt", "cheese"];
     this.FLAVORS = FLAVORS;
     
-    this.makingCakeSide(60, 6, 21);
+    this.makingCakeSide(45, 8, 35);
     this.changeFlavor();
-    // this.Cream();
+    this.Cream();
     
   }
   
@@ -145,7 +145,7 @@ class App {
     const styleSet = (count) => {
       for (let i = 0; i <= count; i++) {
         let deg = i * (360 / this.creamGroupArr.length);
-        this.creamGroupArr[i].style.transform = `rotateY(${deg}deg) translateZ(${200 - 24*2}px)`;
+        this.creamGroupArr[i].style.transform = `rotateY(${deg}deg) translateZ(${250 - 24*2}px)`;
       }
     };
     this.styleSet = styleSet;

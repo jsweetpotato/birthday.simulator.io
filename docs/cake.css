@@ -71,18 +71,18 @@ body{
 
 .cake{
   position: relative;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   transform-style: preserve-3d;
-  transform: rotateX(-3deg);
-  animation: infiniteSpin 160s infinite  linear;
+  transform: rotateX(-30deg);
+  /* animation: infiniteSpin 160s infinite  linear; */
 }
 
 ul {
   margin: 0;
   padding: 0;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,8 +140,8 @@ li {
 /* ----------CAKE TOP & CAKE BOTTOM---------- */
 .top, .bottom{
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   left: 0;
   top: 0;
   background: var(--chocolate-T-B);
@@ -159,16 +159,18 @@ li {
   transform: rotateX(90deg) translateZ(-60px);
 }
 
+
 /* ----------CAKE SIDE---------- */
 
 .side li{
-  width: 22px; /* to soft add 1px*/
+  width: 36px; 
   height: 121px;
   background: var(--chocolate-side);
   z-index: -2;
 }
 
-/* CAKE CHANGE COLOR */
+
+/* ----------CHANGE CAKE COLOR---------- */
 
 .chocolate .side li{background: var(--chocolate-side)}
 .chocolate .cream-top li{background: var(--chocolate-cream-T);}
