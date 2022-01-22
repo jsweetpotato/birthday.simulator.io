@@ -11,7 +11,7 @@ class App {
     
     this.makingCakeSide(60, 6, 21);
     this.changeFlavor();
-    this.Cream();
+    // this.Cream();
     
   }
   
@@ -205,7 +205,6 @@ class App {
     });
   }
 }
-
 
 
 window.onload = function () {
